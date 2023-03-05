@@ -29,20 +29,20 @@ def main():
     
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
-    n = int(input())
+    n = input().strip()
 
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
 
-    input_values = input().split()
-    parents = []
-    for i in range(n):
-        parents.append(int(input_values[i]))
-
-
-    print(compute_height(n, parents))
-    pass
+    if n[0]=='I':
+        n=int(n[1:])
+        input_v=input().split()
+        parents=[]
+        for i in range(n):
+            parents.append(int(input_v[i]))
+        print(compute_height(n, parents))
+        pass
 
 
     
