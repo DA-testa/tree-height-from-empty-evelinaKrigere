@@ -38,7 +38,7 @@ def main():
     if "I" in n:
         n=int(input())
 
-        parents=inpu()
+        parents=input()
         parents=parents.split()
         parents=map(int,parents)
         parents=list(parents)
