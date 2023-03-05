@@ -29,7 +29,7 @@ def main():
     
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
-    n = input().strip()
+    n = sys.stdin.readline().strip()
 
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
@@ -37,7 +37,7 @@ def main():
 
     if n[0]=='I':
         n=int(n[1:])
-        input_v=input().split()
+        input_v=sys.stdin.readline().split()
         parents=[]
         for i in range(n):
             parents.append(int(input_v[i]))
