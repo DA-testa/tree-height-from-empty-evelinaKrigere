@@ -34,7 +34,7 @@ def main():
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
-     input_values = input().split()
+    input_values = input().split()
     parents = []
     for i in range(n):
         parents.append(int(input_values[i]))
