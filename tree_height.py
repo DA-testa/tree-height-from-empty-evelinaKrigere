@@ -29,20 +29,22 @@ def main():
     
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
-    n = sys.stdin.readline().strip()
+    n = input()
 
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
 
-    if n[0]=='I':
-        n=int(n[1:])
-        input_v=sys.stdin.readline().split()
-        parents=[]
-        for i in range(n):
-            parents.append(int(input_v[i]))
-        print(compute_height(n, parents))
-        pass
+    if "I" in n:
+        n=int(input())
+
+        parents=inpu()
+        parents=parents.split()
+        parents=map(int,parents)
+        parents=list(parents)
+
+        print(compute_height(n,parents))
+
 
 
     
