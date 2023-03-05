@@ -6,26 +6,22 @@ import numpy
 
 def compute_height(n, parents):
     # Write this function
-    augstums = {i: 0 for i in range(n)}
+    dzilums1 = [0] * n
     max_height=0
-
+    
     # Your code her
-    rinda = []
-
-    for i, parent in enumerate(parents):
-        if parent == -1:
-            rinda.append(i)
-
-    while rinda:
-        elements = rinda.pop(0)
-        augstums1 = augstums[elements]
-
-        for i, parent in enumerate(parents):
-            if parent == elements:
-                augstums[i] = augstums1 + 1
-                rinda.append(i)
-                
-    max_height = max(augstums.values())
+    for i in range(n):
+        dzilums = 0
+        elements = i
+        while elements != -1:
+            dzilums += 1
+            elements = parents[elements]
+        elements1 = i
+        while elements1 != -1:
+            dzilums1[elements1] = dzilums
+            dzilums -= 1
+            elements1 = parents[elements1]
+    max_height = max(dzilums1)
     return max_height
 
 def main():
